@@ -1,0 +1,16 @@
+.MuiSnackbar-root {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  right: 8px !important;
+  top: 13px !important;
+  z-index: 1400 !important;
+  position: fixed !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  min-width: 70vw;
+
+  .MuiAlert-message {
+    min-width: 190px;
+  }
+}
