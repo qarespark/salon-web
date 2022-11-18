@@ -270,7 +270,7 @@ function Appointment() {
                 markUserOptIn(gupshupConfig, type.number).then(() => {
                     //update in db
                     if (type.from == 'user') {
-                        markUserOptInForWhatsapp(storeMetaData.tenantId,, storeMetaData.id, [type.number]).then(() => {
+                        markUserOptInForWhatsapp(storeMetaData.tenantId, storeMetaData.id, [type.number]).then(() => {
                             const userDeta = { ...typeDetails, optInForWapp: true }
                             setCookie("user", userDeta, { //user registration fields
                                 path: "/",

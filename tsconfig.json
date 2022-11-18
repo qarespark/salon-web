@@ -4,6 +4,7 @@
     "baseUrl": ".",
     "paths": {
       "@element/*": ["./app/components/elements/*"],
+      "@svgs/*": ["./app/components/elements/svgElements/*"],
       "@layout/*": ["./app/components/layouts/*"],
       "@module/*": ["./app/components/modules/*"],
       "@template/*": ["./app/components/templates/*"],
@@ -37,6 +38,6 @@
     "strictFunctionTypes": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.svg", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

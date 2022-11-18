@@ -1,11 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
-const withPWA = require('next-pwa')
 
-module.exports = withPWA({
-  pwa: {
-    dest: 'public'
-  },
+module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'app/styles')],
   },
@@ -13,5 +9,16 @@ module.exports = withPWA({
     //true == Dangerously allow production builds to successfully complete even if  your project has type errors.
     ignoreBuildErrors: false,
   },
-  reactStrictMode: true,
-})
+  images: {
+    disableStaticImages: true
+  },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"]
+    });
+
+    return config;
+  },
+  reactStrictMode: true
+}

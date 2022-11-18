@@ -14,7 +14,6 @@
   "dependencies": {
     "@babel/core": "^7.12.17",
     "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.2",
     "clsx": "^1.1.1",
     "moment": "^2.29.1",
     "next": "^10.0.7",
